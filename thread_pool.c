@@ -111,7 +111,7 @@ void * producter(int n){
     while(n--){
         int arg = rand() % 12 + 1;
         PushTask(calcu,(void *)arg);
-        usleep(100000);
+        usleep(2500);
     }
 }
 
@@ -147,7 +147,7 @@ int main(){
 
     ThreadPoolInit(10);     //初始化10个线程
 
-    producter(30);            //生产任务
+    producter(3000);            //生产任务
     //PushTask(calcu,5);
 
     sleep(5);  // 等待任务执行
